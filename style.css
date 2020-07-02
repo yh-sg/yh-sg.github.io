@@ -1,0 +1,202 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    margin: 0;
+    background-color: rgb(30, 30, 30);
+    height: 100%
+}
+
+h1{
+    display: block;
+    font-size: 1.8rem;
+    color:white;
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: rgb(12, 187, 6);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.6;
+}
+
+span, button{
+    height:100%;
+    font-weight: 800;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #990000;
+    /* for hover */
+    transition: all 1s;
+    font-family: 'Yellowtail', cursive;
+}
+
+button:hover, .selected{
+    margin: 0 7px;
+    color: white;
+    background-color: rgb(12, 187, 6);
+}
+
+button:focus{
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+    font-family: 'Yellowtail', cursive;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+.footer {
+    display: block;
+    padding: 15px 0;
+    background-color: black;
+    margin-top: 20px;
+    color: crimson;
+    font-family: 'Yellowtail', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1.5;
+ }
+ 
+#container{
+    display: grid;
+    margin: 0 auto;
+    width: 500px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.space{
+    height:10px;
+    color: whitesmoke;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    position: relative;
+    top:230px;
+}
+
+.btn{
+    height: 220px;
+    width: 220px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 25%;
+    box-shadow: 2px 2px #999;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.pressedAnimation {
+    /* Specificity */
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+  }
+
+.gameover{
+    background-color: maroon;
+    opacity: 0.5;
+}
+
+#difficulty, #secondary, #instruction{
+    display: block;
+    height: 25px;
+    background-color: white;
+}
+
+#instruction>button{
+    color:#800080;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* for phone */
+  @media only screen and (max-width: 570px) {
+    h1{
+        width: 100%;
+        font-size: 1.15rem;
+    }
+    #container{
+        width: 320px;
+    }
+    .btn{
+        height: 140px;
+        width: 140px;
+    }
+    span, button{
+        font-weight: bold;
+        font-size: 0.40rem;
+    }
+    #difficulty, #secondary, #instruction{
+        height: 20px;
+        background-color: black;
+    }
+    .space{
+        font-size: 1.3rem;
+        padding: 0 5px;
+        top:160px;
+        height:10px
+    }
+  }
+
+  /* stomp it to bottom!! */
+  @media only screen and (min-height: 660px) and (max-width: 570px), (min-height: 830px){
+    .footer {
+        position: absolute;
+        bottom:0;
+        width:100%;
+     }
+  }
