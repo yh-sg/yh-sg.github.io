@@ -190,6 +190,9 @@ ul {
         top:160px;
         height:10px
     }
+    ul>li, ul>span, li>span{
+        font-size: 1rem;
+    }
   }
 
   /* stomp it to bottom!! */
